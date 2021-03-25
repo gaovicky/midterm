@@ -97,7 +97,7 @@ body {
 
 /*Link to the banner images*/
 .HomeBanner {
-  background-image: url('https://lh3.googleusercontent.com/proxy/stAy8djsdmtlhFNd3tpStzL-oQHK3wdAU8uCcD4FckPbb8dfRGG-RiYtXTvcbWnyD0X_-N_DAGKxq-G3jFqsLmyVO2cSiHMkExMPb63ePFbiW_isLq-fuykpRm0Jjasw5v4');
+  background-image: url('https://static.billboard.com/files/2021/03/rose-of-blackpink-on-the-ground-teaser-video-still-billboard-1548-1615233703-compressed.jpg');
 }
 
 .AboutBanner {
@@ -163,14 +163,14 @@ body {
 }
 
 .HomeImg2 img {
-  height: 60vmin;
+  height: 50vmin;
   width: 70vmin;
   object-fit:cover;
 }
 
 /*Changing the size of the Spotify playlist*/
 .spotify iframe {
-  height: 60vmin;
+  height: 50vmin;
   width: 70vmin;
 }
 
