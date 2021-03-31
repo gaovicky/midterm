@@ -9,25 +9,25 @@ body {
 #MenuContainer {
   display: grid;
   grid-template-columns: repeat(4,1fr);
+  height: 100vh;
   align-items: center;
   background-color: #f9f9f9;
 }
 
 /*Styling the Album Cover*/
 #Album {
-  grid-column: 1/3;
-  height: 50vmax;
-  width: 50vmax;
-  object-fit: cover;
+  grid-column: span 2;
+  width: 100%;
+  z-index: +90;
+  object-fit: contain;
 }
 
 /*Arranging and styling the menu*/
 #Menu {
-  grid-column: 3/5;
+  grid-column: span 2;
   font-family: 'DM Serif Display', serif;
   font-size: 5vmin;
   line-height: 2em;
-  width: 50vmax;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,19 +46,49 @@ body {
 }
 
 /*Using Grid for the About, On The Ground, and Gone Page*/
-.AboutContainer, .Song1Container, .Song2Container, .HomeContainer{
+.HomeContainer, .AboutContainer, .Song1Container, .Song2Container, .BPContainer{
   display: grid;
   grid-template-columns: repeat(2,1fr);
   grid-gap: 3vmin;
+  overflow-x: scroll;
 }
 
 /*Changing the background colors for the different pages*/
-.AboutContainer, .Song2Container {
+.HomeContainer, .AboutContainer, .Song2Container, .BPContainer {
   background-color: #fcf9f5;
 }
 
 .Song1Container {
   background-color: #f9f9f9;
+}
+
+/*Styling the logo*/
+.logo, .homelogo, .logo1, .logo2 {
+  padding: .8rem;
+}
+
+.logo, .homelogo, .logo2 {
+  color: #fcf9f5
+}
+
+.logo1 {
+  color: #f9f9f9;
+  }
+
+.logo {
+  background-color: #7c53a6;
+}
+
+.homelogo {
+  background-color: #BA719C;
+}
+
+.logo1 {
+  background-color: #153F59;
+}
+
+.logo2 {
+  background-color: #732716;
 }
 
 /*Stying the NavBar*/
@@ -97,7 +127,8 @@ body {
 
 /*Link to the banner images*/
 .HomeBanner {
-  background-image: url('https://static.billboard.com/files/2021/03/rose-of-blackpink-on-the-ground-teaser-video-still-billboard-1548-1615233703-compressed.jpg');
+  /* background-image: url('https://static.billboard.com/files/2021/03/rose-of-blackpink-on-the-ground-teaser-video-still-billboard-1548-1615233703-compressed.jpg'); */
+  background-image: url('https://dbkpop.com/wp-content/uploads/2021/03/blackpink_rose_r_on_the_ground_concept_2.jpg');
 }
 
 .AboutBanner {
@@ -120,7 +151,7 @@ body {
 }
 
 /*Styling the body texts*/
-.Text1 p, .Text2, .Lyrics1 p, .Lyrics2 p, .SongInfo1 p, .SongInfo2 p {
+.Text1 p, .Text2, .Lyrics1 p, .Lyrics2 p, .SongInfo1 p, .SongInfo2 p, .comingsoon {
   font-family: 'Poppins', sans-serif;
   font-size: 2.2vmin;
   line-height: 2.3em;
@@ -129,7 +160,7 @@ body {
 
 /*Changing the padding*/
 .Text1, .Row3 {
-  padding: 5vmin 10vmin 10vmin 10vmin;
+  padding: 5vmin 10vmin 10vmin 13vmin;
 }
 
 /*Styling "Who is Rosé?"*/
@@ -155,8 +186,16 @@ body {
   text-align: right;
 }
 
+.memberquote {
+  font-size: 3vmin;
+  font-family: 'DM Serif Display', serif;
+  color: #C48DCF;
+  text-align: justify;
+  line-height: 2em;
+}
+
 /*Styling the posters*/
-.Img2 img, .Img3 img{
+.Img img{
   height: 90vmin;
   width: 60vmin;
   object-fit: cover;
@@ -165,6 +204,18 @@ body {
 .HomeImg2 img {
   height: 50vmin;
   width: 70vmin;
+  object-fit: cover;
+}
+
+.HomeImg3 img {
+  height: 70vmin;
+  width: 70vmin;
+  object-fit: cover;
+}
+
+.MembersImg img {
+  height: 40vmin;
+  width: 50vmin;
   object-fit:cover;
 }
 
@@ -175,9 +226,17 @@ body {
 }
 
 /*Aligning the posters*/
-.HomeImg2, .Img2, .Img3, .spotify {
+.HomeImg2, .Img, .spotify, .HomeImg3 {
   justify-self: center;
   align-self: center;
+}
+
+/*Aligning the images on the BlackPink page*/
+.MembersImg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -257,16 +316,20 @@ body {
 }
 
 /*Changing the color of the texts*/
-.Text1 p, .Text2, .TopNav a {
+.Text1 p, .Text2, .menubutton {
   color: #7c53a6;
 }
 
-.Lyrics1, .MoreContent1 h3, .SongInfo1, .TopNav1 a {
+.Lyrics1, .MoreContent1 h3, .SongInfo1, .menubutton1 {
   color: #153F59;
 }
 
-.Lyrics2, .MoreContent2 h3, .SongInfo2, .TopNav2 a{
+.Lyrics2, .MoreContent2 h3, .SongInfo2, .menubutton2, .comingsoon{
   color: #732716;
+}
+
+.homemenubutton {
+  color: #BA719C;
 }
 
 /*Arranging the youtube videos*/
